@@ -51,7 +51,7 @@ pipeline {
         docker { image 'docker:dind' }
       }
       steps {
-        sh 'docker -H tcp://172.31.32.153:2375 container run --detach --name hello-world -p 80:8080 hello-world:$BUILD_NUMBER'
+        sh 'docker -H tcp://172.31.32.153:2375 container run --detach --name hello-world -p 80:8080 leafyoon/hello-world:$BUILD_NUMBER'
       }
     }
   }
